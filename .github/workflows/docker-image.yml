@@ -31,7 +31,7 @@ jobs:
       id: meta
       uses: docker/metadata-action@v5
       with:
-        images: samyerkes/school-media-downloader
+        images: ghcr.io/samyerkes/school-media-downloader
     - name: Build and push Docker images
       id: push
       uses: docker/build-push-action@v6
