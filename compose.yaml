@@ -1,0 +1,12 @@
+---
+services:
+  app:
+    build:
+      context: .
+      target: final
+      args:
+        - APP_VERSION=latest
+    volumes:
+      - ./media:/media
+    env_file:
+      - .envrc
