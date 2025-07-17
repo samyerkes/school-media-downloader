@@ -37,6 +37,8 @@ jobs:
       id: push
       uses: docker/build-push-action@v6
       with:
+        build-args: |
+          APP_VERSION=${{ github.ref_name }}
         context: .
         push: true
         platforms: linux/amd64,linux/arm64
