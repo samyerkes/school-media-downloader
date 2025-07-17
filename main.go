@@ -33,14 +33,6 @@ var (
 )
 
 func main() {
-	// If --help is provided, show usage and exit
-	if len(os.Args) > 1 && os.Args[1] == "--help" {
-		fmt.Println("Downloads photos and videos from school for a specified date.")
-		fmt.Println("If no date is provided, it defaults to today's date.")
-		fmt.Println("Usage: go run main.go [--date YYYY-MM-DD]")
-		return
-	}
-
 	Logger.Info("Starting...", "version", Version)
 
 	CheckRequiredEnvVars("API_BASE_URL", "AUTH_TOKEN")
